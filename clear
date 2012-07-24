@@ -1,0 +1,100 @@
+names rando.outgoing
+names rando.outgoing(:guest)
+names rando.outgoing(:guest).incoming(:friends)
+names rando.outgoing(:guest).
+asd
+n1.outgoing(:friends).prune("position.endNode().getProperty('name') == 'Tom';")
+rando.outgoing.prune("position.endNode().getProperty('type') == 'Listing';")
+names rando.outgoing.prune("position.endNode().getProperty('type') == 'Listing';")
+names rando.both.prune("position.endNode().getProperty('type') == 'Listing';")
+@neo
+neo = Neography::Rest.new
+neo.traverse(rando, "nodes")
+neo.traverse(rando, "nodes", {uniqueness: 'node global'}})
+names neo.traverse(rando, "nodes", {uniqueness: 'node global'})
+neo.traverse(rando, "nodes", {uniqueness: 'node global'})
+def data(x)
+x.map {|y| y['data'] }
+data neo.traverse(rando, "nodes", {uniqueness: 'node global'}).first
+neo.traverse(rando, "nodes", {uniqueness: 'node global'}).first
+data neo.traverse(rando, "nodes", {uniqueness: 'node global'})
+data neo.traverse(rando, "nodes", {'uniqueness' => 'node global', 'return filter' => {'type' => 'Listing'}})
+data neo.traverse(rando, "nodes", {'uniqueness' => 'node global', 'return filter' => {'type' => '"Listing"'}})
+data neo.traverse(rando, "nodes", {'uniqueness' => 'node global'})
+hive = Node.create(name: 'Hive')
+hive['type'] = 'Listing'
+hive
+hive.incoming(:regular) << rando
+hive.incoming(:guest) << rando
+neo
+neo.list_node_indexes
+neo.create_node_index('listings')
+l = Listing.first
+neo.create_unique_node('listings', 'id', l.id, {'name' => l.name, 'type' => 'Listing'})
+neo.find_node_index('listings', 'id', 1)
+green
+neo.create_node_index('members')
+neo.create_node_index('regulars')
+green.destroy
+green.del
+green.first.del
+green.first
+green.first.class
+green = neo.find_node_index('listings', 'id', 1)
+y green.first.class
+y green.first
+Node.load(green.first['self'])
+green = Node.load(green.first['self'])
+colin
+joe
+rando
+green.incoming(:regular, 'id' => 999999) << rando
+lc = neo.find_node_index('listings', 'id', 369)
+Favorite
+neo.create_node_index('facebook_friends')
+m = Member.find_by_email 'campbell@loosecubes.com'
+m.id
+campbell = neo.find_node_index('members', 'id', 239)
+m = Member.find_by_email 'colin@loosecubes.com'
+campbell = neo.find_node_index('members', 'id', 1350)
+campbell = Node.load(campbell.first['self'])
+l = Listing.last
+l.destroy
+Listing.last
+"x".pad(10)
+"x".rjust(10)
+"x".ljust(10)
+"x".ljust(12)
+"xssssssssssssssssssssssssssssssssssssss".ljust(12)
+"xssssssssssssssssssssssssssssssssssssss".slice(12).ljust(12)
+"xssssssssssssssssssssssssssssssssssssss".slice(0..12).ljust(12)
+"x".slice(0..12).ljust(12)
+txt <<-TXT
+cleear
+clear
+return <<-TXT
+           _
+       .--' |
+      /___^ |     .--.
+          ) |    /    \
+         /  |  /`      '.
+        |   '-'    /     \
+        \ #{self.slice(0..12).ljust(12)}|\
+         \    /   \      /\|
+          \  /'----`\   /
+          |||       \\ |
+          ((|        ((|
+          |||        |||
+         //_(       //_(
+TXT
+end
+"Colin".camelize
+class String
+def camelize
+require 'pp'
+"a    b".split /\w/
+"a    b".split /\w+/
+"a    b".split /[\w]+/
+"a    b".split /[/w]+/
+"a    b".split /[/w]+//
+/
